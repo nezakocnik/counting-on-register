@@ -1,0 +1,8 @@
+# Exact versions with which every number in gigafida/results/ was reproduced (Python 3.13).
+scikit-learn==1.8.0
+numpy==2.5.4
+pandas==3.1.1
+scipy==1.18.1
+matplotlib==3.11.2
+joblib==1.6.0
+tabulate==0.10.0

@@ -1,0 +1,2057 @@
+{
+ "n_documents_corpus": 38310,
+ "n_documents_with_register": 38115,
+ "n_documents_after_min_tokens": 35683,
+ "min_tokens": 300,
+ "tokens_analysed": 1336666086,
+ "class_counts": {
+  "newspaper": 21319,
+  "internet": 6662,
+  "magazine": 5194,
+  "non-fiction": 1184,
+  "fiction": 791,
+  "legislative": 533
+ },
+ "class_tokens": {
+  "fiction": 48666429,
+  "internet": 372908777,
+  "legislative": 1863614,
+  "magazine": 222273026,
+  "newspaper": 639356202,
+  "non-fiction": 51598038
+ },
+ "class_titles": {
+  "fiction": 769,
+  "internet": 786,
+  "legislative": 526,
+  "magazine": 246,
+  "newspaper": 73,
+  "non-fiction": 977
+ },
+ "features": [
+  "num_per_1k",
+  "card_per_1k",
+  "ord_per_1k",
+  "card_ord_ratio",
+  "low_per_1k",
+  "high_per_1k",
+  "prop_digit",
+  "prop_compound",
+  "prop_case_nom",
+  "prop_case_gen",
+  "prop_case_dat",
+  "prop_case_acc",
+  "prop_case_loc",
+  "prop_case_ins",
+  "prop_gender_agr",
+  "dual_per_1k",
+  "prop_pos_initial",
+  "prop_pos_medial",
+  "prop_pos_final",
+  "prop_ctx_temporal",
+  "prop_ctx_measure",
+  "prop_ctx_monetary",
+  "prop_ctx_enum",
+  "prop_ctx_other"
+ ],
+ "folds": 5,
+ "seed": 42,
+ "protocol_A_document_cv": {
+  "Naive Bayes": {
+   "macro_f1": 0.3480929215843925,
+   "weighted_f1": 0.43324900278946765,
+   "accuracy": 0.43530532746686096,
+   "per_class": {
+    "fiction": {
+     "precision": 0.22486854314877822,
+     "recall": 0.9190897597977244,
+     "f1": 0.36133200795228626,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.16169724770642202,
+     "recall": 0.11908783783783784,
+     "f1": 0.13715953307392997,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.2546699875466999,
+     "recall": 0.7673545966228893,
+     "f1": 0.38242169237961665,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.4727366255144033,
+     "recall": 0.17693492491336157,
+     "f1": 0.2574950966657327,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.7961268354969142,
+     "recall": 0.3509545475866598,
+     "f1": 0.48715694892079303,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.31427804616210414,
+     "recall": 0.8788652056439508,
+     "f1": 0.4629922505139965,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     727,
+     11,
+     10,
+     13,
+     28,
+     2
+    ],
+    [
+     292,
+     141,
+     65,
+     252,
+     245,
+     189
+    ],
+    [
+     4,
+     11,
+     409,
+     5,
+     95,
+     9
+    ],
+    [
+     696,
+     199,
+     135,
+     919,
+     1024,
+     2221
+    ],
+    [
+     1470,
+     479,
+     834,
+     700,
+     7482,
+     10354
+    ],
+    [
+     44,
+     31,
+     153,
+     55,
+     524,
+     5855
+    ]
+   ]
+  },
+  "Linear SVM": {
+   "macro_f1": 0.29647896994863626,
+   "weighted_f1": 0.5007734548438612,
+   "accuracy": 0.608020626068436,
+   "per_class": {
+    "fiction": {
+     "precision": 0.10810810810810811,
+     "recall": 0.0050568900126422255,
+     "f1": 0.00966183574879227,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.509090909090909,
+     "recall": 0.02364864864864865,
+     "f1": 0.04519774011299435,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.7703862660944206,
+     "recall": 0.6735459662288931,
+     "f1": 0.7187187187187187,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.5109540636042402,
+     "recall": 0.1391990758567578,
+     "f1": 0.21879255560599184,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.6206509539842873,
+     "recall": 0.9597542098597496,
+     "f1": 0.75382234830343,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.16285329744279947,
+     "recall": 0.018162713899729812,
+     "f1": 0.032680621201890615,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     4,
+     1,
+     1,
+     9,
+     771,
+     5
+    ],
+    [
+     4,
+     28,
+     11,
+     261,
+     847,
+     33
+    ],
+    [
+     0,
+     0,
+     359,
+     18,
+     114,
+     42
+    ],
+    [
+     9,
+     13,
+     10,
+     723,
+     4316,
+     123
+    ],
+    [
+     20,
+     9,
+     41,
+     369,
+     20461,
+     419
+    ],
+    [
+     0,
+     4,
+     44,
+     35,
+     6458,
+     121
+    ]
+   ]
+  },
+  "Random forest": {
+   "macro_f1": 0.7395360967074648,
+   "weighted_f1": 0.835601843365748,
+   "accuracy": 0.845780904071967,
+   "per_class": {
+    "fiction": {
+     "precision": 0.875,
+     "recall": 0.7876106194690266,
+     "f1": 0.8290086493679308,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.7520325203252033,
+     "recall": 0.3125,
+     "f1": 0.441527446300716,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.9041450777202072,
+     "recall": 0.6547842401500938,
+     "f1": 0.7595212187159956,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.7678336404316926,
+     "recall": 0.5616095494801694,
+     "f1": 0.64872678750139,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.8354030985801545,
+     "recall": 0.9687133542849101,
+     "f1": 0.8971329278887924,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.9454512829714696,
+     "recall": 0.79090363254278,
+     "f1": 0.8612995504699632,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     623,
+     21,
+     0,
+     42,
+     105,
+     0
+    ],
+    [
+     47,
+     370,
+     5,
+     281,
+     453,
+     28
+    ],
+    [
+     0,
+     7,
+     349,
+     4,
+     164,
+     9
+    ],
+    [
+     26,
+     65,
+     5,
+     2917,
+     2122,
+     59
+    ],
+    [
+     16,
+     17,
+     18,
+     408,
+     20652,
+     208
+    ],
+    [
+     0,
+     12,
+     9,
+     147,
+     1225,
+     5269
+    ]
+   ]
+  },
+  "Majority-class baseline": {
+   "macro_f1": 0.12466814029917078,
+   "weighted_f1": 0.4469019000148006,
+   "accuracy": 0.5974553709049127,
+   "per_class": {
+    "fiction": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.5974553709049127,
+     "recall": 1.0,
+     "f1": 0.7480088417950247,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     0,
+     0,
+     0,
+     0,
+     791,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     1184,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     533,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     5194,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     21319,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     6662,
+     0
+    ]
+   ]
+  },
+  "Random-feature control": {
+   "macro_f1": 0.12466447957053385,
+   "weighted_f1": 0.44688877728288734,
+   "accuracy": 0.5974273463554073,
+   "per_class": {
+    "fiction": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.597444089456869,
+     "recall": 0.999953093484685,
+     "f1": 0.7479868774232031,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     0,
+     0,
+     0,
+     0,
+     791,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     1184,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     533,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     5194,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     21318,
+     1
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     6662,
+     0
+    ]
+   ]
+  },
+  "Linear SVM (class-weighted)": {
+   "macro_f1": 0.4617547092311877,
+   "weighted_f1": 0.5840811030706804,
+   "accuracy": 0.5880671468206149,
+   "per_class": {
+    "fiction": {
+     "precision": 0.27366020524515394,
+     "recall": 0.9102402022756005,
+     "f1": 0.4208065458796026,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.20741807706157725,
+     "recall": 0.4864864864864865,
+     "f1": 0.2908356475637465,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.4384469696969697,
+     "recall": 0.8686679174484052,
+     "f1": 0.5827564505978603,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.5152032798086779,
+     "recall": 0.29033500192529843,
+     "f1": 0.3713828346262775,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.7095279203962016,
+     "recall": 0.7324921431586847,
+     "f1": 0.7208271787296898,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.49054401120709784,
+     "recall": 0.31537075953167215,
+     "f1": 0.38391959798994973,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     720,
+     27,
+     5,
+     12,
+     24,
+     3
+    ],
+    [
+     179,
+     576,
+     29,
+     175,
+     138,
+     87
+    ],
+    [
+     6,
+     22,
+     463,
+     2,
+     16,
+     24
+    ],
+    [
+     467,
+     824,
+     55,
+     1508,
+     2053,
+     287
+    ],
+    [
+     1238,
+     1173,
+     373,
+     1138,
+     15616,
+     1781
+    ],
+    [
+     21,
+     155,
+     131,
+     92,
+     4162,
+     2101
+    ]
+   ]
+  },
+  "Random forest (class-weighted)": {
+   "macro_f1": 0.7388812094905175,
+   "weighted_f1": 0.8309558918151291,
+   "accuracy": 0.842642154527366,
+   "per_class": {
+    "fiction": {
+     "precision": 0.8678720445062587,
+     "recall": 0.7888748419721872,
+     "f1": 0.8264900662251655,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.7568627450980392,
+     "recall": 0.3260135135135135,
+     "f1": 0.4557260920897285,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.9116883116883117,
+     "recall": 0.6585365853658537,
+     "f1": 0.7647058823529411,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.8051251489868891,
+     "recall": 0.5202156334231806,
+     "f1": 0.632046783625731,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.8224753767651596,
+     "recall": 0.9753271729443219,
+     "f1": 0.8924034334763948,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.959499263622975,
+     "recall": 0.7823476433503452,
+     "f1": 0.8619149991731437,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     624,
+     21,
+     0,
+     29,
+     117,
+     0
+    ],
+    [
+     44,
+     386,
+     8,
+     209,
+     531,
+     6
+    ],
+    [
+     0,
+     1,
+     351,
+     4,
+     172,
+     5
+    ],
+    [
+     28,
+     77,
+     2,
+     2702,
+     2351,
+     34
+    ],
+    [
+     23,
+     12,
+     15,
+     301,
+     20793,
+     175
+    ],
+    [
+     0,
+     13,
+     9,
+     111,
+     1317,
+     5212
+    ]
+   ]
+  }
+ },
+ "protocol_B_title_grouped_cv": {
+  "Naive Bayes": {
+   "macro_f1": 0.30045461489912734,
+   "weighted_f1": 0.33164520919895835,
+   "accuracy": 0.3534456183616848,
+   "per_class": {
+    "fiction": {
+     "precision": 0.22064164648910412,
+     "recall": 0.9216182048040455,
+     "f1": 0.35604395604395606,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.1400560224089636,
+     "recall": 0.1266891891891892,
+     "f1": 0.13303769401330376,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.22957198443579765,
+     "recall": 0.774859287054409,
+     "f1": 0.3542024013722127,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.23918070697059796,
+     "recall": 0.13939160569888331,
+     "f1": 0.17613429023233182,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.6692669804976462,
+     "recall": 0.2334068202073268,
+     "f1": 0.3461083675314739,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.29505958943665667,
+     "recall": 0.8435905133593515,
+     "f1": 0.43720098020148584,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     729,
+     11,
+     8,
+     14,
+     27,
+     2
+    ],
+    [
+     291,
+     150,
+     67,
+     246,
+     258,
+     172
+    ],
+    [
+     3,
+     8,
+     413,
+     5,
+     92,
+     12
+    ],
+    [
+     713,
+     308,
+     130,
+     724,
+     1358,
+     1961
+    ],
+    [
+     1524,
+     556,
+     1029,
+     1954,
+     4976,
+     11280
+    ],
+    [
+     44,
+     38,
+     152,
+     84,
+     724,
+     5620
+    ]
+   ]
+  },
+  "Linear SVM": {
+   "macro_f1": 0.2834166397128329,
+   "weighted_f1": 0.4818525229422879,
+   "accuracy": 0.5774458425580808,
+   "per_class": {
+    "fiction": {
+     "precision": 0.042105263157894736,
+     "recall": 0.0050568900126422255,
+     "f1": 0.009029345372460496,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.36,
+     "recall": 0.022804054054054054,
+     "f1": 0.04289118347895155,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.7457264957264957,
+     "recall": 0.6547842401500938,
+     "f1": 0.6973026973026973,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.3870595031773541,
+     "recall": 0.12899499422410474,
+     "f1": 0.19350180505415163,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.6095733676060312,
+     "recall": 0.9121440968150476,
+     "f1": 0.7307779030439684,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.07714083510261854,
+     "recall": 0.01636145301711198,
+     "f1": 0.0269969040247678,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     4,
+     1,
+     1,
+     9,
+     770,
+     6
+    ],
+    [
+     5,
+     27,
+     12,
+     268,
+     828,
+     44
+    ],
+    [
+     0,
+     0,
+     349,
+     22,
+     112,
+     50
+    ],
+    [
+     16,
+     25,
+     9,
+     670,
+     4292,
+     182
+    ],
+    [
+     70,
+     19,
+     44,
+     718,
+     19446,
+     1022
+    ],
+    [
+     0,
+     3,
+     53,
+     44,
+     6453,
+     109
+    ]
+   ]
+  },
+  "Random forest": {
+   "macro_f1": 0.6574554212089886,
+   "weighted_f1": 0.7306324305262157,
+   "accuracy": 0.7339629515455539,
+   "per_class": {
+    "fiction": {
+     "precision": 0.8102766798418972,
+     "recall": 0.7774968394437421,
+     "f1": 0.7935483870967742,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.5987558320373251,
+     "recall": 0.3251689189189189,
+     "f1": 0.421455938697318,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.823943661971831,
+     "recall": 0.6585365853658537,
+     "f1": 0.7320125130344108,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.39647491768351734,
+     "recall": 0.3941085868309588,
+     "f1": 0.3952882108718741,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.7815935273942485,
+     "recall": 0.8337633097237206,
+     "f1": 0.8068359773949751,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.8431932773109244,
+     "recall": 0.7530771540078055,
+     "f1": 0.7955915001585792,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     615,
+     22,
+     0,
+     55,
+     98,
+     1
+    ],
+    [
+     56,
+     385,
+     5,
+     287,
+     413,
+     38
+    ],
+    [
+     0,
+     10,
+     351,
+     5,
+     157,
+     10
+    ],
+    [
+     31,
+     116,
+     2,
+     2047,
+     2883,
+     115
+    ],
+    [
+     57,
+     78,
+     30,
+     2610,
+     17775,
+     769
+    ],
+    [
+     0,
+     32,
+     38,
+     159,
+     1416,
+     5017
+    ]
+   ]
+  },
+  "Majority-class baseline": {
+   "macro_f1": 0.12466814029917078,
+   "weighted_f1": 0.4469019000148006,
+   "accuracy": 0.5974553709049127,
+   "per_class": {
+    "fiction": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.5974553709049127,
+     "recall": 1.0,
+     "f1": 0.7480088417950247,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     0,
+     0,
+     0,
+     0,
+     791,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     1184,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     533,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     5194,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     21319,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     6662,
+     0
+    ]
+   ]
+  },
+  "Random-feature control": {
+   "macro_f1": 0.12466814029917078,
+   "weighted_f1": 0.4469019000148006,
+   "accuracy": 0.5974553709049127,
+   "per_class": {
+    "fiction": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.5974553709049127,
+     "recall": 1.0,
+     "f1": 0.7480088417950247,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     0,
+     0,
+     0,
+     0,
+     791,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     1184,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     533,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     5194,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     21319,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     6662,
+     0
+    ]
+   ]
+  },
+  "Linear SVM (class-weighted)": {
+   "macro_f1": 0.4273552244264878,
+   "weighted_f1": 0.5278446791148894,
+   "accuracy": 0.5216209399433904,
+   "per_class": {
+    "fiction": {
+     "precision": 0.24547627176510756,
+     "recall": 0.9089759797724399,
+     "f1": 0.3865591397849462,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.1922689075630252,
+     "recall": 0.4831081081081081,
+     "f1": 0.2750661216638615,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.43767840152235965,
+     "recall": 0.8630393996247655,
+     "f1": 0.5808080808080808,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.37296690970274815,
+     "recall": 0.2560646900269542,
+     "f1": 0.3036529680365297,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.6820871713065404,
+     "recall": 0.6217458605000235,
+     "f1": 0.6505202198665097,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.3974515622272648,
+     "recall": 0.3417892524767337,
+     "f1": 0.36752481639899925,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     719,
+     29,
+     6,
+     11,
+     24,
+     2
+    ],
+    [
+     181,
+     572,
+     27,
+     171,
+     143,
+     90
+    ],
+    [
+     4,
+     23,
+     460,
+     0,
+     20,
+     26
+    ],
+    [
+     494,
+     930,
+     56,
+     1330,
+     2007,
+     377
+    ],
+    [
+     1516,
+     1283,
+     371,
+     1937,
+     13255,
+     2957
+    ],
+    [
+     15,
+     138,
+     131,
+     117,
+     3984,
+     2277
+    ]
+   ]
+  },
+  "Random forest (class-weighted)": {
+   "macro_f1": 0.6562803618895633,
+   "weighted_f1": 0.7364122642213141,
+   "accuracy": 0.7439677157189698,
+   "per_class": {
+    "fiction": {
+     "precision": 0.807843137254902,
+     "recall": 0.7812895069532237,
+     "f1": 0.794344473007712,
+     "support": 791
+    },
+    "non-fiction": {
+     "precision": 0.6348408710217756,
+     "recall": 0.32010135135135137,
+     "f1": 0.42560359348680515,
+     "support": 1184
+    },
+    "legislative": {
+     "precision": 0.7630434782608696,
+     "recall": 0.6585365853658537,
+     "f1": 0.7069486404833837,
+     "support": 533
+    },
+    "magazine": {
+     "precision": 0.41507336594041794,
+     "recall": 0.3594532152483635,
+     "f1": 0.3852661989269501,
+     "support": 5194
+    },
+    "newspaper": {
+     "precision": 0.77210455538746,
+     "recall": 0.861813405882077,
+     "f1": 0.8144962872658761,
+     "support": 21319
+    },
+    "internet": {
+     "precision": 0.8907849829351536,
+     "recall": 0.7443710597418193,
+     "f1": 0.811022978166653,
+     "support": 6662
+    }
+   },
+   "confusion": [
+    [
+     618,
+     16,
+     0,
+     37,
+     119,
+     1
+    ],
+    [
+     50,
+     379,
+     8,
+     229,
+     507,
+     11
+    ],
+    [
+     0,
+     3,
+     351,
+     4,
+     168,
+     7
+    ],
+    [
+     32,
+     112,
+     0,
+     1867,
+     3139,
+     44
+    ],
+    [
+     65,
+     64,
+     29,
+     2243,
+     18373,
+     545
+    ],
+    [
+     0,
+     23,
+     72,
+     118,
+     1490,
+     4959
+    ]
+   ]
+  }
+ },
+ "protocol_C_balanced_grouped_cv": {
+  "n_per_class": 533,
+  "reps": 3,
+  "results": {
+   "Naive Bayes": {
+    "macro_f1_mean": 0.4769429688425888,
+    "macro_f1_sd": 0.008262851882926768,
+    "weighted_f1_mean": 0.47694296884258885,
+    "accuracy_mean": 0.5225140712945592,
+    "per_class_f1_mean": {
+     "fiction": 0.7584276776433829,
+     "non-fiction": 0.26203394124917995,
+     "legislative": 0.8120412048817389,
+     "magazine": 0.23217977019301525,
+     "newspaper": 0.20511449426952535,
+     "internet": 0.5918607248186906
+    },
+    "confusion_sum": [
+     [
+      1469,
+      36,
+      22,
+      39,
+      29,
+      4
+     ],
+     [
+      424,
+      292,
+      115,
+      402,
+      200,
+      166
+     ],
+     [
+      12,
+      46,
+      1333,
+      29,
+      142,
+      37
+     ],
+     [
+      245,
+      159,
+      58,
+      308,
+      273,
+      556
+     ],
+     [
+      115,
+      70,
+      106,
+      218,
+      277,
+      813
+     ],
+     [
+      12,
+      13,
+      50,
+      36,
+      154,
+      1334
+     ]
+    ]
+   },
+   "Linear SVM": {
+    "macro_f1_mean": 0.5698472919693246,
+    "macro_f1_sd": 0.006341125984767796,
+    "weighted_f1_mean": 0.5698472919693246,
+    "accuracy_mean": 0.6032937252449447,
+    "per_class_f1_mean": {
+     "fiction": 0.8066081743755974,
+     "non-fiction": 0.5521678112670082,
+     "legislative": 0.8837168122882408,
+     "magazine": 0.34812680977064536,
+     "newspaper": 0.20814866891508244,
+     "internet": 0.6203154751993732
+    },
+    "confusion_sum": [
+     [
+      1486,
+      73,
+      13,
+      17,
+      5,
+      5
+     ],
+     [
+      281,
+      898,
+      69,
+      176,
+      45,
+      130
+     ],
+     [
+      19,
+      45,
+      1436,
+      8,
+      21,
+      70
+     ],
+     [
+      153,
+      438,
+      25,
+      432,
+      305,
+      246
+     ],
+     [
+      139,
+      140,
+      57,
+      201,
+      248,
+      814
+     ],
+     [
+      8,
+      60,
+      51,
+      32,
+      160,
+      1288
+     ]
+    ]
+   },
+   "Random forest": {
+    "macro_f1_mean": 0.6709821285130468,
+    "macro_f1_sd": 0.0065147985702944545,
+    "weighted_f1_mean": 0.6709821285130467,
+    "accuracy_mean": 0.6789660204294351,
+    "per_class_f1_mean": {
+     "fiction": 0.8713420822874604,
+     "non-fiction": 0.6184182802120185,
+     "legislative": 0.8811785403018423,
+     "magazine": 0.47324419009480306,
+     "newspaper": 0.4065460627544392,
+     "internet": 0.7751636154277172
+    },
+    "confusion_sum": [
+     [
+      1423,
+      116,
+      3,
+      35,
+      21,
+      1
+     ],
+     [
+      149,
+      1076,
+      74,
+      190,
+      97,
+      13
+     ],
+     [
+      3,
+      50,
+      1468,
+      15,
+      56,
+      7
+     ],
+     [
+      55,
+      402,
+      42,
+      729,
+      312,
+      59
+     ],
+     [
+      36,
+      183,
+      86,
+      432,
+      572,
+      290
+     ],
+     [
+      1,
+      54,
+      60,
+      82,
+      156,
+      1246
+     ]
+    ]
+   },
+   "Linear SVM (class-weighted)": {
+    "macro_f1_mean": 0.5785172842061758,
+    "macro_f1_sd": 0.009440090506538035,
+    "weighted_f1_mean": 0.5785172842061758,
+    "accuracy_mean": 0.6116322701688555,
+    "per_class_f1_mean": {
+     "fiction": 0.8057495420149031,
+     "non-fiction": 0.5500403493652147,
+     "legislative": 0.8840607035386152,
+     "magazine": 0.35354921846044624,
+     "newspaper": 0.24247689199942588,
+     "internet": 0.6352269998584493
+    },
+    "confusion_sum": [
+     [
+      1486,
+      74,
+      13,
+      18,
+      3,
+      5
+     ],
+     [
+      281,
+      897,
+      71,
+      177,
+      45,
+      128
+     ],
+     [
+      19,
+      45,
+      1437,
+      8,
+      21,
+      69
+     ],
+     [
+      155,
+      448,
+      25,
+      437,
+      285,
+      249
+     ],
+     [
+      141,
+      138,
+      53,
+      184,
+      286,
+      797
+     ],
+     [
+      8,
+      61,
+      53,
+      31,
+      121,
+      1325
+     ]
+    ]
+   },
+   "Random forest (class-weighted)": {
+    "macro_f1_mean": 0.6722664209652423,
+    "macro_f1_sd": 0.005801891466903262,
+    "weighted_f1_mean": 0.6722664209652423,
+    "accuracy_mean": 0.6795914112987284,
+    "per_class_f1_mean": {
+     "fiction": 0.870566730700585,
+     "non-fiction": 0.6176926515149121,
+     "legislative": 0.8793196549330226,
+     "magazine": 0.47752866442325476,
+     "newspaper": 0.4150855190327419,
+     "internet": 0.773405305186937
+    },
+    "confusion_sum": [
+     [
+      1416,
+      123,
+      6,
+      34,
+      19,
+      1
+     ],
+     [
+      145,
+      1072,
+      73,
+      188,
+      107,
+      14
+     ],
+     [
+      3,
+      52,
+      1464,
+      19,
+      56,
+      5
+     ],
+     [
+      52,
+      401,
+      45,
+      735,
+      304,
+      62
+     ],
+     [
+      36,
+      170,
+      85,
+      427,
+      589,
+      292
+     ],
+     [
+      2,
+      54,
+      58,
+      77,
+      164,
+      1244
+     ]
+    ]
+   },
+   "Majority-class baseline": {
+    "macro_f1_mean": 0.05594350676219945,
+    "macro_f1_sd": 0.0004987247279221841,
+    "weighted_f1_mean": 0.05594350676219945,
+    "accuracy_mean": 0.11548884719616427,
+    "per_class_f1_mean": {
+     "fiction": 0.0,
+     "non-fiction": 0.0,
+     "legislative": 0.0,
+     "magazine": 0.15357692607639287,
+     "newspaper": 0.18208411449680384,
+     "internet": 0.0
+    },
+    "confusion_sum": [
+     [
+      0,
+      0,
+      0,
+      318,
+      1281,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      318,
+      1281,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      318,
+      1281,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      305,
+      1294,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      796,
+      803,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      318,
+      1281,
+      0
+     ]
+    ]
+   },
+   "Random-feature control": {
+    "macro_f1_mean": 0.19078831732900717,
+    "macro_f1_sd": 0.04646876567712636,
+    "weighted_f1_mean": 0.19078831732900717,
+    "accuracy_mean": 0.19084844694600792,
+    "per_class_f1_mean": {
+     "fiction": 0.2114332211777087,
+     "non-fiction": 0.16340390588262468,
+     "legislative": 0.218573906437334,
+     "magazine": 0.21463657045549586,
+     "newspaper": 0.17988098154254295,
+     "internet": 0.1568013184783367
+    },
+    "confusion_sum": [
+     [
+      350,
+      162,
+      364,
+      316,
+      76,
+      331
+     ],
+     [
+      278,
+      260,
+      195,
+      197,
+      290,
+      379
+     ],
+     [
+      332,
+      229,
+      323,
+      270,
+      285,
+      160
+     ],
+     [
+      218,
+      297,
+      204,
+      358,
+      296,
+      226
+     ],
+     [
+      243,
+      313,
+      231,
+      255,
+      283,
+      274
+     ],
+     [
+      338,
+      292,
+      74,
+      323,
+      315,
+      257
+     ]
+    ]
+   }
+  }
+ },
+ "importance": {
+  "rf_impurity": {
+   "num_per_1k": 0.04177,
+   "card_per_1k": 0.03684,
+   "ord_per_1k": 0.05327,
+   "card_ord_ratio": 0.03886,
+   "low_per_1k": 0.0353,
+   "high_per_1k": 0.04094,
+   "prop_digit": 0.05163,
+   "prop_compound": 0.06592,
+   "prop_case_nom": 0.02372,
+   "prop_case_gen": 0.03196,
+   "prop_case_dat": 0.04937,
+   "prop_case_acc": 0.03426,
+   "prop_case_loc": 0.029,
+   "prop_case_ins": 0.02636,
+   "prop_gender_agr": 0.04305,
+   "dual_per_1k": 0.02414,
+   "prop_pos_initial": 0.03951,
+   "prop_pos_medial": 0.04349,
+   "prop_pos_final": 0.055,
+   "prop_ctx_temporal": 0.05033,
+   "prop_ctx_measure": 0.03294,
+   "prop_ctx_monetary": 0.0436,
+   "prop_ctx_enum": 0.05556,
+   "prop_ctx_other": 0.0532
+  },
+  "svm_abs_coef": {
+   "num_per_1k": 0.2069,
+   "card_per_1k": 0.0761,
+   "ord_per_1k": 0.0494,
+   "card_ord_ratio": 0.03513,
+   "low_per_1k": 0.03967,
+   "high_per_1k": 0.08582,
+   "prop_digit": 0.04443,
+   "prop_compound": 0.01119,
+   "prop_case_nom": 0.01441,
+   "prop_case_gen": 0.01121,
+   "prop_case_dat": 0.00301,
+   "prop_case_acc": 0.01572,
+   "prop_case_loc": 0.00821,
+   "prop_case_ins": 0.00724,
+   "prop_gender_agr": 0.02575,
+   "dual_per_1k": 0.00693,
+   "prop_pos_initial": 0.01466,
+   "prop_pos_medial": 0.02654,
+   "prop_pos_final": 0.00455,
+   "prop_ctx_temporal": 0.06522,
+   "prop_ctx_measure": 0.03907,
+   "prop_ctx_monetary": 0.0673,
+   "prop_ctx_enum": 0.04614,
+   "prop_ctx_other": 0.09538
+  },
+  "permutation_grouped": {
+   "num_per_1k": 0.00983,
+   "card_per_1k": 0.00333,
+   "ord_per_1k": 0.029,
+   "card_ord_ratio": 0.00752,
+   "low_per_1k": 0.00399,
+   "high_per_1k": 0.00361,
+   "prop_digit": 0.01618,
+   "prop_compound": 0.02399,
+   "prop_case_nom": 0.00215,
+   "prop_case_gen": 0.02449,
+   "prop_case_dat": 0.03405,
+   "prop_case_acc": 0.00965,
+   "prop_case_loc": 0.00322,
+   "prop_case_ins": 0.00484,
+   "prop_gender_agr": 0.00867,
+   "dual_per_1k": 0.00308,
+   "prop_pos_initial": 0.01522,
+   "prop_pos_medial": 0.02159,
+   "prop_pos_final": 0.04148,
+   "prop_ctx_temporal": 0.02621,
+   "prop_ctx_measure": 0.00622,
+   "prop_ctx_monetary": 0.02352,
+   "prop_ctx_enum": 0.06376,
+   "prop_ctx_other": 0.01658
+  }
+ },
+ "profile_means": {
+  "fiction": {
+   "num_per_1k": 9.4156,
+   "card_per_1k": 4.2266,
+   "ord_per_1k": 1.2644,
+   "card_ord_ratio": 3.4387,
+   "low_per_1k": 3.4841,
+   "high_per_1k": 2.0069,
+   "prop_digit": 0.0857,
+   "prop_compound": 0.0682,
+   "prop_case_nom": 0.2776,
+   "prop_case_gen": 0.1335,
+   "prop_case_dat": 0.0241,
+   "prop_case_acc": 0.3782,
+   "prop_case_loc": 0.1199,
+   "prop_case_ins": 0.0642,
+   "prop_gender_agr": 0.7497,
+   "dual_per_1k": 0.8782,
+   "prop_pos_initial": 0.0613,
+   "prop_pos_medial": 0.936,
+   "prop_pos_final": 0.0027,
+   "prop_ctx_temporal": 0.1881,
+   "prop_ctx_measure": 0.0271,
+   "prop_ctx_monetary": 0.0189,
+   "prop_ctx_enum": 0.0847,
+   "prop_ctx_other": 0.6813
+  },
+  "non-fiction": {
+   "num_per_1k": 27.9659,
+   "card_per_1k": 19.3435,
+   "ord_per_1k": 4.0059,
+   "card_ord_ratio": 9.2739,
+   "low_per_1k": 10.1545,
+   "high_per_1k": 13.1949,
+   "prop_digit": 0.5269,
+   "prop_compound": 0.0268,
+   "prop_case_nom": 0.2688,
+   "prop_case_gen": 0.1682,
+   "prop_case_dat": 0.0222,
+   "prop_case_acc": 0.2995,
+   "prop_case_loc": 0.1657,
+   "prop_case_ins": 0.0721,
+   "prop_gender_agr": 0.4191,
+   "dual_per_1k": 1.1064,
+   "prop_pos_initial": 0.0771,
+   "prop_pos_medial": 0.8971,
+   "prop_pos_final": 0.0279,
+   "prop_ctx_temporal": 0.1858,
+   "prop_ctx_measure": 0.0651,
+   "prop_ctx_monetary": 0.0169,
+   "prop_ctx_enum": 0.1031,
+   "prop_ctx_other": 0.6293
+  },
+  "legislative": {
+   "num_per_1k": 51.363,
+   "card_per_1k": 22.9633,
+   "ord_per_1k": 20.1317,
+   "card_ord_ratio": 1.5802,
+   "low_per_1k": 22.3093,
+   "high_per_1k": 20.7857,
+   "prop_digit": 0.636,
+   "prop_compound": 0.0101,
+   "prop_case_nom": 0.1743,
+   "prop_case_gen": 0.3871,
+   "prop_case_dat": 0.0226,
+   "prop_case_acc": 0.1818,
+   "prop_case_loc": 0.1723,
+   "prop_case_ins": 0.0525,
+   "prop_gender_agr": 0.3287,
+   "dual_per_1k": 0.7135,
+   "prop_pos_initial": 0.0505,
+   "prop_pos_medial": 0.9234,
+   "prop_pos_final": 0.0269,
+   "prop_ctx_temporal": 0.1518,
+   "prop_ctx_measure": 0.0397,
+   "prop_ctx_monetary": 0.0543,
+   "prop_ctx_enum": 0.3848,
+   "prop_ctx_other": 0.3738
+  },
+  "magazine": {
+   "num_per_1k": 24.1865,
+   "card_per_1k": 16.1961,
+   "ord_per_1k": 3.753,
+   "card_ord_ratio": 5.6261,
+   "low_per_1k": 8.7668,
+   "high_per_1k": 11.1824,
+   "prop_digit": 0.5074,
+   "prop_compound": 0.0319,
+   "prop_case_nom": 0.2645,
+   "prop_case_gen": 0.1423,
+   "prop_case_dat": 0.0165,
+   "prop_case_acc": 0.338,
+   "prop_case_loc": 0.1541,
+   "prop_case_ins": 0.0792,
+   "prop_gender_agr": 0.4093,
+   "dual_per_1k": 1.2415,
+   "prop_pos_initial": 0.0572,
+   "prop_pos_medial": 0.9286,
+   "prop_pos_final": 0.0154,
+   "prop_ctx_temporal": 0.2251,
+   "prop_ctx_measure": 0.1034,
+   "prop_ctx_monetary": 0.0389,
+   "prop_ctx_enum": 0.082,
+   "prop_ctx_other": 0.5508
+  },
+  "newspaper": {
+   "num_per_1k": 29.8994,
+   "card_per_1k": 19.7323,
+   "ord_per_1k": 6.155,
+   "card_ord_ratio": 3.7932,
+   "low_per_1k": 10.8282,
+   "high_per_1k": 15.0591,
+   "prop_digit": 0.5353,
+   "prop_compound": 0.0348,
+   "prop_case_nom": 0.2447,
+   "prop_case_gen": 0.1432,
+   "prop_case_dat": 0.0156,
+   "prop_case_acc": 0.3386,
+   "prop_case_loc": 0.1685,
+   "prop_case_ins": 0.0816,
+   "prop_gender_agr": 0.3722,
+   "dual_per_1k": 1.3095,
+   "prop_pos_initial": 0.0343,
+   "prop_pos_medial": 0.9626,
+   "prop_pos_final": 0.0032,
+   "prop_ctx_temporal": 0.2493,
+   "prop_ctx_measure": 0.0744,
+   "prop_ctx_monetary": 0.0754,
+   "prop_ctx_enum": 0.0871,
+   "prop_ctx_other": 0.5144
+  },
+  "internet": {
+   "num_per_1k": 34.0004,
+   "card_per_1k": 22.9537,
+   "ord_per_1k": 6.9369,
+   "card_ord_ratio": 3.6599,
+   "low_per_1k": 12.4983,
+   "high_per_1k": 17.3923,
+   "prop_digit": 0.6212,
+   "prop_compound": 0.0162,
+   "prop_case_nom": 0.2419,
+   "prop_case_gen": 0.1379,
+   "prop_case_dat": 0.0122,
+   "prop_case_acc": 0.3276,
+   "prop_case_loc": 0.1873,
+   "prop_case_ins": 0.0905,
+   "prop_gender_agr": 0.3135,
+   "dual_per_1k": 1.333,
+   "prop_pos_initial": 0.0295,
+   "prop_pos_medial": 0.968,
+   "prop_pos_final": 0.0025,
+   "prop_ctx_temporal": 0.2752,
+   "prop_ctx_measure": 0.0827,
+   "prop_ctx_monetary": 0.0688,
+   "prop_ctx_enum": 0.1158,
+   "prop_ctx_other": 0.4576
+  }
+ }
+}

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article and this repository."
+title: "Counting on register: code and data"
+abstract: >-
+  Code and data for a study of numeral distribution as a predictor of text register in
+  Slovenian: a KonText extraction script and per-document numeral counts for Gigafida 2.1,
+  feature extraction for the SSJ Universal Dependencies treebank, and the classification,
+  evaluation and feature-importance pipeline.
+type: software
+authors:
+  - family-names: "Kočnik"
+    given-names: "Neža"
+    affiliation: "University of Maribor, Faculty of Arts"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # remove the # and add your ORCID
+version: "1.0.0"
+date-released: "2026-11-05"
+license: MIT
+repository-code: "https://github.com/YOUR-USERNAME/counting-on-register"
+keywords:
+  - numerals
+  - register variation
+  - text classification
+  - Slovenian
+  - Gigafida
+  - corpus linguistics

@@ -1,0 +1,493 @@
+{
+ "n_windows_input": 168,
+ "n_windows": 168,
+ "n_documents": 168,
+ "windows_per_register": {
+  "narrative": 42,
+  "report": 42,
+  "statute": 42,
+  "commercial": 42
+ },
+ "documents_per_register": {
+  "commercial": 42,
+  "narrative": 42,
+  "report": 42,
+  "statute": 42
+ },
+ "dropped_registers": {},
+ "folds": 5,
+ "seed": 42,
+ "results": {
+  "Naive Bayes": {
+   "macro_f1": 1.0,
+   "weighted_f1": 1.0,
+   "accuracy": 1.0,
+   "per_class": {
+    "commercial": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 42
+    },
+    "narrative": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 42
+    },
+    "report": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 42
+    },
+    "statute": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 42
+    }
+   },
+   "confusion": [
+    [
+     42,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     42,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     42,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     42
+    ]
+   ]
+  },
+  "Linear SVM": {
+   "macro_f1": 0.9940467753366407,
+   "weighted_f1": 0.9940467753366407,
+   "accuracy": 0.9940476190476191,
+   "per_class": {
+    "commercial": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 42
+    },
+    "narrative": {
+     "precision": 1.0,
+     "recall": 0.9761904761904762,
+     "f1": 0.9879518072289156,
+     "support": 42
+    },
+    "report": {
+     "precision": 0.9767441860465116,
+     "recall": 1.0,
+     "f1": 0.9882352941176471,
+     "support": 42
+    },
+    "statute": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 42
+    }
+   },
+   "confusion": [
+    [
+     42,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     41,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     42,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     42
+    ]
+   ]
+  },
+  "Random forest": {
+   "macro_f1": 1.0,
+   "weighted_f1": 1.0,
+   "accuracy": 1.0,
+   "per_class": {
+    "commercial": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 42
+    },
+    "narrative": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 42
+    },
+    "report": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 42
+    },
+    "statute": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 42
+    }
+   },
+   "confusion": [
+    [
+     42,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     42,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     42,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     42
+    ]
+   ]
+  },
+  "Majority-class baseline": {
+   "macro_f1": 0.18977020014825796,
+   "weighted_f1": 0.18977020014825796,
+   "accuracy": 0.23809523809523808,
+   "per_class": {
+    "commercial": {
+     "precision": 0.24,
+     "recall": 0.5714285714285714,
+     "f1": 0.3380281690140845,
+     "support": 42
+    },
+    "narrative": {
+     "precision": 0.23529411764705882,
+     "recall": 0.19047619047619047,
+     "f1": 0.21052631578947367,
+     "support": 42
+    },
+    "report": {
+     "precision": 0.23529411764705882,
+     "recall": 0.19047619047619047,
+     "f1": 0.21052631578947367,
+     "support": 42
+    },
+    "statute": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 42
+    }
+   },
+   "confusion": [
+    [
+     24,
+     9,
+     9,
+     0
+    ],
+    [
+     25,
+     8,
+     9,
+     0
+    ],
+    [
+     25,
+     9,
+     8,
+     0
+    ],
+    [
+     26,
+     8,
+     8,
+     0
+    ]
+   ]
+  },
+  "Random-feature control": {
+   "macro_f1": 0.2724940013730568,
+   "weighted_f1": 0.2724940013730568,
+   "accuracy": 0.26785714285714285,
+   "per_class": {
+    "commercial": {
+     "precision": 0.4117647058823529,
+     "recall": 0.3333333333333333,
+     "f1": 0.3684210526315789,
+     "support": 42
+    },
+    "narrative": {
+     "precision": 0.3333333333333333,
+     "recall": 0.3333333333333333,
+     "f1": 0.3333333333333333,
+     "support": 42
+    },
+    "report": {
+     "precision": 0.10638297872340426,
+     "recall": 0.11904761904761904,
+     "f1": 0.11235955056179775,
+     "support": 42
+    },
+    "statute": {
+     "precision": 0.26666666666666666,
+     "recall": 0.2857142857142857,
+     "f1": 0.27586206896551724,
+     "support": 42
+    }
+   },
+   "confusion": [
+    [
+     14,
+     2,
+     16,
+     10
+    ],
+    [
+     9,
+     14,
+     10,
+     9
+    ],
+    [
+     2,
+     21,
+     5,
+     14
+    ],
+    [
+     9,
+     5,
+     16,
+     12
+    ]
+   ]
+  }
+ },
+ "importance": {
+  "rf_impurity": {
+   "num_per_1k": 0.10105,
+   "card_per_1k": 0.0848,
+   "ord_per_1k": 0.11442,
+   "card_ord_ratio": 0.08494,
+   "low_per_1k": 0.00932,
+   "high_per_1k": 0.10911,
+   "prop_digit": 0.09927,
+   "prop_compound": 0.00233,
+   "prop_case_nom": 0.00458,
+   "prop_case_gen": 0.03859,
+   "prop_case_dat": 0.01381,
+   "prop_case_acc": 0.00772,
+   "prop_case_loc": 0.00479,
+   "prop_case_ins": 0.00297,
+   "prop_gender_agr": 0.02645,
+   "dual_per_1k": 0.00113,
+   "prop_pos_initial": 0.00256,
+   "prop_pos_medial": 0.00448,
+   "prop_pos_final": 0.00237,
+   "prop_ctx_temporal": 0.10447,
+   "prop_ctx_measure": 0.0,
+   "prop_ctx_monetary": 0.12111,
+   "prop_ctx_enum": 0.05098,
+   "prop_ctx_other": 0.00873
+  },
+  "svm_abs_coef": {
+   "num_per_1k": 0.02637,
+   "card_per_1k": 0.08664,
+   "ord_per_1k": 0.06558,
+   "card_ord_ratio": 0.031,
+   "low_per_1k": 0.03767,
+   "high_per_1k": 0.05765,
+   "prop_digit": 0.13882,
+   "prop_compound": 0.02289,
+   "prop_case_nom": 0.02422,
+   "prop_case_gen": 0.02704,
+   "prop_case_dat": 0.03089,
+   "prop_case_acc": 0.01813,
+   "prop_case_loc": 0.02848,
+   "prop_case_ins": 0.03099,
+   "prop_gender_agr": 0.01639,
+   "dual_per_1k": 0.00931,
+   "prop_pos_initial": 0.01247,
+   "prop_pos_medial": 0.00887,
+   "prop_pos_final": 0.01116,
+   "prop_ctx_temporal": 0.07361,
+   "prop_ctx_measure": 0.0,
+   "prop_ctx_monetary": 0.14294,
+   "prop_ctx_enum": 0.05358,
+   "prop_ctx_other": 0.04528
+  },
+  "permutation_grouped": {
+   "num_per_1k": 0.0,
+   "card_per_1k": 0.0,
+   "ord_per_1k": 0.0,
+   "card_ord_ratio": 0.0,
+   "low_per_1k": 0.0,
+   "high_per_1k": 0.0,
+   "prop_digit": 0.0,
+   "prop_compound": 0.0,
+   "prop_case_nom": 0.0,
+   "prop_case_gen": 0.0,
+   "prop_case_dat": 0.0,
+   "prop_case_acc": 0.0,
+   "prop_case_loc": 0.0,
+   "prop_case_ins": 0.0,
+   "prop_gender_agr": 0.0,
+   "dual_per_1k": 0.0,
+   "prop_pos_initial": 0.0,
+   "prop_pos_medial": 0.0,
+   "prop_pos_final": 0.0,
+   "prop_ctx_temporal": 0.00196,
+   "prop_ctx_measure": 0.0,
+   "prop_ctx_monetary": 0.00993,
+   "prop_ctx_enum": 0.0,
+   "prop_ctx_other": 0.0
+  }
+ },
+ "profile_means": {
+  "commercial": {
+   "num_per_1k": 57.619,
+   "card_per_1k": 55.0,
+   "ord_per_1k": 2.619,
+   "card_ord_ratio": 23.1032,
+   "low_per_1k": 8.8095,
+   "high_per_1k": 46.0317,
+   "prop_digit": 0.8048,
+   "prop_compound": 0.1622,
+   "prop_case_nom": 0.2361,
+   "prop_case_gen": 0.2658,
+   "prop_case_dat": 0.1221,
+   "prop_case_acc": 0.1986,
+   "prop_case_loc": 0.0845,
+   "prop_case_ins": 0.0928,
+   "prop_gender_agr": 0.0591,
+   "dual_per_1k": 2.9762,
+   "prop_pos_initial": 0.0796,
+   "prop_pos_medial": 0.8341,
+   "prop_pos_final": 0.0864,
+   "prop_ctx_temporal": 0.0,
+   "prop_ctx_measure": 0.0,
+   "prop_ctx_monetary": 0.5693,
+   "prop_ctx_enum": 0.4823,
+   "prop_ctx_other": 0.0299
+  },
+  "narrative": {
+   "num_per_1k": 13.0556,
+   "card_per_1k": 12.5397,
+   "ord_per_1k": 0.5159,
+   "card_ord_ratio": 7.5238,
+   "low_per_1k": 9.127,
+   "high_per_1k": 0.4365,
+   "prop_digit": 0.0297,
+   "prop_compound": 0.1057,
+   "prop_case_nom": 0.355,
+   "prop_case_gen": 0.0632,
+   "prop_case_dat": 0.0,
+   "prop_case_acc": 0.3845,
+   "prop_case_loc": 0.1138,
+   "prop_case_ins": 0.0836,
+   "prop_gender_agr": 0.3959,
+   "dual_per_1k": 4.5635,
+   "prop_pos_initial": 0.1025,
+   "prop_pos_medial": 0.799,
+   "prop_pos_final": 0.0984,
+   "prop_ctx_temporal": 0.4992,
+   "prop_ctx_measure": 0.0,
+   "prop_ctx_monetary": 0.0,
+   "prop_ctx_enum": 0.4431,
+   "prop_ctx_other": 0.1279
+  },
+  "report": {
+   "num_per_1k": 42.2222,
+   "card_per_1k": 36.3889,
+   "ord_per_1k": 5.8333,
+   "card_ord_ratio": 7.9722,
+   "low_per_1k": 13.9683,
+   "high_per_1k": 21.6667,
+   "prop_digit": 0.513,
+   "prop_compound": 0.1766,
+   "prop_case_nom": 0.2367,
+   "prop_case_gen": 0.198,
+   "prop_case_dat": 0.0,
+   "prop_case_acc": 0.2849,
+   "prop_case_loc": 0.2066,
+   "prop_case_ins": 0.0738,
+   "prop_gender_agr": 0.1602,
+   "dual_per_1k": 4.0476,
+   "prop_pos_initial": 0.0645,
+   "prop_pos_medial": 0.8588,
+   "prop_pos_final": 0.0767,
+   "prop_ctx_temporal": 0.5498,
+   "prop_ctx_measure": 0.0,
+   "prop_ctx_monetary": 0.0,
+   "prop_ctx_enum": 0.4745,
+   "prop_ctx_other": 0.0362
+  },
+  "statute": {
+   "num_per_1k": 78.4921,
+   "card_per_1k": 33.2143,
+   "ord_per_1k": 45.2778,
+   "card_ord_ratio": 0.7728,
+   "low_per_1k": 21.4683,
+   "high_per_1k": 48.1746,
+   "prop_digit": 0.6131,
+   "prop_compound": 0.1868,
+   "prop_case_nom": 0.0979,
+   "prop_case_gen": 0.5607,
+   "prop_case_dat": 0.0,
+   "prop_case_acc": 0.1119,
+   "prop_case_loc": 0.2295,
+   "prop_case_ins": 0.0,
+   "prop_gender_agr": 0.2435,
+   "dual_per_1k": 1.8651,
+   "prop_pos_initial": 0.0936,
+   "prop_pos_medial": 0.8088,
+   "prop_pos_final": 0.0976,
+   "prop_ctx_temporal": 0.0,
+   "prop_ctx_measure": 0.0,
+   "prop_ctx_monetary": 0.0,
+   "prop_ctx_enum": 0.8179,
+   "prop_ctx_other": 0.1821
+  }
+ }
+}

@@ -15,7 +15,7 @@ authors:
 version: "1.0.0"
 date-released: "2026-11-05"
 license: MIT
-repository-code: "https://github.com/YOUR-USERNAME/counting-on-register"
+repository-code: "https://github.com/nezakocnik/counting-on-register"
 keywords:
   - numerals
   - register variation

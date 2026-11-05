@@ -9,8 +9,7 @@ The study asks whether numerals alone can tell you what kind of text you are rea
 
 Headline result: a random forest reaches macro-F1 0.74 under document-level cross-validation and 0.66 when whole periodicals and books are held out (majority baseline 0.12).
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
-<!-- Replace XXXXXXX with the concept DOI Zenodo gives you after the first release. -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23986964.svg)](https://doi.org/10.5281/zenodo.23986964)
 
 ## Contents
 
